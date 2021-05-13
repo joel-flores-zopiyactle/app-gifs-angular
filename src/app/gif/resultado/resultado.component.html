@@ -1,0 +1,20 @@
+<hr>
+<div class="row" *ngIf="resultados.length > 0; else message">
+  <div
+  *ngFor="let gif of resultados"
+  class="col-md-4 col-sm-6 animate__animated animate__fadeIn">
+    <div class="card p-2 m-1">
+      <img [src]="gif.images.downsized_medium.url" class="card-img-top" [alt]="gif.title">
+      <div class="card-body">
+        <p class="card-text">{{gif.title}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #message>
+  <div class="alert alert-warning" role="alert">
+    No hay resultados de su busqueda!!. Busque por otro nombre
+  </div>
+</ng-template>
+

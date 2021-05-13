@@ -1,0 +1,19 @@
+<div class="bg-dark p-3" id="sidebar">
+  <h4 class="text-white">
+    <img [src]="'assets/img/Logo.png'" class="rounded pl-2" alt="" width="25px">
+    <b>GIFsJf</b>
+  </h4>
+  <hr class="text-white">
+  <h5 class="text-white">Historial</h5>
+  <div class="list-group">
+    <li
+    style="cursor: pointer;"
+    class="list-group-item list-group-item-action"
+    *ngFor="let histori of historial"
+    (click)="buscar(histori)"
+    >
+      {{histori | titlecase}}
+    </li>
+
+  </div>
+</div>
